@@ -11,13 +11,13 @@
 </div>
 
 <div>
-  <label>Use Number</label>
-  <input type="checkbox" />
+  <label>Use Numbers</label>
+  <input (change)="onChangeUseNumbers()" type="checkbox" />
 </div>
 
 <div>
   <label>Use Symbols</label>
-  <input type="checkbox" />
+  <input (change)="onChangeUseSymbols() type="checkbox" />
 </div>
 
 <div>
@@ -28,8 +28,3 @@
   <label>Your Password</label>
   <input [value]="password" />
 </div>
-
-<!--  -->
-{{password}}
-{{getPassword()}}
-{{getName()}}
