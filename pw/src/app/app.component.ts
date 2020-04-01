@@ -7,4 +7,8 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'pw';
+
+  onButtonClick(){
+    console.log('Butotn Was Clicked');
+  }
 }
