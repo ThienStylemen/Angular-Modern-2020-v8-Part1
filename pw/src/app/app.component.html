@@ -2,7 +2,7 @@
 
 <div><!-- div is to make it not stay in the same line -->
   <label>Enter Length</label>
-  <input />
+  <input (input)="onChangeLength($event.target.value)" /><!--.addEvent('input', event =>)-->
 </div>
 
 <div>

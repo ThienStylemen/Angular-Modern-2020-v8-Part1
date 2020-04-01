@@ -6,11 +6,20 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
+  length = 0;
   includeLetters = false;
   includeNumbers = false;
   includeSymbols = false;
 
   password='';
+
+  onChangeLength(value: string){  //typescript
+    const parsedValue = parseInt(value);
+    if(!isNaN(parsedValue)){
+      this.length = parsedValue;
+    }
+  }
+
   onButtonClick() {
     console.log(`
       About to generate password with the following
