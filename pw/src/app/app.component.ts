@@ -21,13 +21,21 @@ export class AppComponent {
   }
 
   onButtonClick() {
-    console.log(`
-      About to generate password with the following
-      Includes Letters${this.includeLetters}
-      Includes Numbers${this.includeNumbers}
-      Includes Symbols${this.includeSymbols}
-    `);
-    this.password ='MY PASS';
+    const letters = 'qwertyuiopasdfghjklzxcvbnm';
+    const numbers = '1234567890';
+    const symbols = '!@#$%^&*()';
+    let validChars = '';
+    
+    if (this.includeLetters) validChars+=letters;
+    if (this.includeNumbers) validChars+=numbers;
+    if (this.includeSymbols) validChars+=symbols;
+
+    let generatedPassword='';
+    for(let i=0;i<this.length;i++){
+      let index = Math.floor(Math.random()*validChars.length);
+      generatedPassword += validChars[index];
+    }
+    this.password = generatedPassword;
   }
 
   onChangeUseLetters(){
