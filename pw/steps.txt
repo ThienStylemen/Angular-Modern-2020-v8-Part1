@@ -1,1 +1,2 @@
 npm install bulma, https://bulma.io/documentation/form/general/
+npm install generate now
